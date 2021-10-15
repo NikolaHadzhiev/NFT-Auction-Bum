@@ -1,0 +1,26 @@
+@use "../../styles/colors";
+
+.wrapper {
+  padding: 6.25rem 0px;
+  background-color: colors.$background_default;
+}
+
+.container {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.inputBase {
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 25px;
+  opacity: 0.6;
+  font-size: 0.8rem;
+  width: 50ch;
+}
+
+
+
+
