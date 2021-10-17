@@ -11,13 +11,23 @@
   display: flex;
 }
 
+
 .inputBase {
   background-color: colors.$background_default;
   border: 2px solid colors.$background_default;
-  margin-right: 220px;
+  margin-right: 13.75rem;
   border-radius: 25px;
   font-size: 0.8rem;
   width: 63ch;
   height: 2.7rem;
+}
+
+.nav {
+  background-color: colors.$background_paper;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
 }
 

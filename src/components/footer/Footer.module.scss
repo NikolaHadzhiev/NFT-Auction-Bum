@@ -1,0 +1,29 @@
+@use "../../styles/colors";
+
+.foot {
+    background-color: colors.$background_paper;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.container{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.5rem;
+}
+
+.paraStyle{
+    color: colors.$text_disabled;
+    margin-left: 3.75rem;
+}
+
+.logoContainer{
+    display: flex;
+}
+
+.wrapper{
+    max-width: 1600px;
+    margin: 0 auto;
+}

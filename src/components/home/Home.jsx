@@ -1,13 +1,11 @@
-import styles from "./Home.module.scss";
-import classNames from "classnames";
 import Header from "../header/Header.jsx"
+import Footer from "../footer/footer.jsx"
 
 export default function HomeComponent() {
   return (
-    <div className={classNames(styles.nav)}>
-      <div className={classNames(styles.wrapper)}>
-        <Header />
-      </div>
-    </div>
+    <>
+      <Header />
+      <Footer />
+    </>
   );
 }
