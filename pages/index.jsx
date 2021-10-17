@@ -1,5 +1,5 @@
-import Example from "../src/components/example/Example";
+import HomeComponent from "../src/components/home/Home.jsx";
 
-export default function Index() {
-  return <Example />;
+export default function Home() {
+  return <HomeComponent />;
 }

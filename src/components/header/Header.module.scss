@@ -1,26 +1,23 @@
 @use "../../styles/colors";
 
-.wrapper {
-  padding: 6.25rem 0px;
-  background-color: colors.$background_default;
+.container{
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.5rem;
 }
 
-.container {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
- 
+.logoContainer{
+  display: flex;
 }
 
 .inputBase {
-  background-color: black;
-  border: 2px solid black;
+  background-color: colors.$background_default;
+  border: 2px solid colors.$background_default;
+  margin-right: 220px;
   border-radius: 25px;
-  opacity: 0.6;
   font-size: 0.8rem;
-  width: 50ch;
+  width: 63ch;
+  height: 2.7rem;
 }
-
-
-
 

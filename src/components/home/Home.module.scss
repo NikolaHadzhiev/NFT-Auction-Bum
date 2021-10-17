@@ -1,0 +1,11 @@
+@use "../../styles/colors";
+
+.nav {
+  background-color: colors.$background_paper;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
