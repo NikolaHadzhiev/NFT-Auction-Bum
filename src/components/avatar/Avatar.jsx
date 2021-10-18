@@ -1,22 +1,11 @@
-import Avatar from '@mui/material/Avatar';
-import Badge from '@mui/material/Badge';
-import VerifiedBadge from './VerifiedBadge.jsx'
+import styles from'./Avatar.module.scss'
+import classNames from "classnames";
 
-export default function AvatarComponent({ url = '/images/avatar.png', size = 90, verified = false }) {
-
-    let Verified;
-    if (verified) {
-        Verified =
-            <Badge overlap="circular" anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} badgeContent={<VerifiedBadge size={size} alt="verified" src="/images/verified.svg" />}>
-                <Avatar sx={{ width: `${size}px`, height: `${size}px` }} alt="avatar" src={url} />
-            </Badge>
-    } else {
-        Verified = <Avatar sx={{ width: `${size}px`, height: `${size}px`}} alt="avatar" src={url} />
-    }
-
+export default function Avatar({ url = '/images/avatar.png', size = 90, verified = false }) {
     return (
-        <div style={{width: `${size}px`, height: `${size}px`}}>
-            {Verified}
+        <div style={{width: size, height: size}} className={classNames(styles.avatar)}>
+            <img className={classNames(styles.image)} src={url} alt="avatar" />
+            {verified ? <img className={classNames(styles.badge)} src='/images/verified.svg' alt="verified" /> : null}
         </div>
     );
 }
