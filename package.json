@@ -12,6 +12,7 @@
     "@mui/material": "latest",
     "classnames": "^2.2.6",
     "clsx": "latest",
+    "millify": "^4.0.0",
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",

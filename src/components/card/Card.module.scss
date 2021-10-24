@@ -1,0 +1,48 @@
+@use "../../styles/colors";
+
+.card{
+    max-width: 21.875rem;
+    border-radius: 0.9375rem !important;
+}
+
+.media{
+    padding: 0.625rem 0.9375rem;
+    height: 18.75rem;
+    border-radius: 1.875rem;
+}
+
+.cardAction{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    line-height: 1.5;
+}
+
+.title{
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.price{
+    font-size: 1rem;
+    color: colors.$secondary_main;
+    font-weight: 700;
+}
+
+.likes{
+    margin-left: auto;
+    border: 2px solid !important;
+    color: colors.$secondary_main !important; 
+    background-color: #1a2e2d !important;
+    height: 2.3125rem !important;
+    border-radius: 1.25rem !important;
+    font-size: 1rem !important;
+    font-weight: 600;
+}
+
+.icon{
+    color: colors.$secondary_main !important; 
+    font-size: 1rem !important;
+    margin-left: 0.625rem !important;
+    margin-right: -0.5rem !important;
+}
