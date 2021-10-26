@@ -9,7 +9,7 @@ import styles from './Card.module.scss'
 import classNames from "classnames";
 import millify from "millify";
 
-function Card({name, likes, mediaUrl, user, price, currency}) {
+function Card({name = "", likes = 0, mediaUrl = "", user, price = "", currency = ""}) {
     return (
         <MuiCard className={classNames(styles.card)}>
             <CardHeader sx={{ padding: '1.0625rem 1rem 0.4375rem 1rem' }} avatar={<Avatar url={user.avatarUrl} size={45} verified={user.verified} />} />
@@ -30,18 +30,6 @@ function Card({name, likes, mediaUrl, user, price, currency}) {
             </CardActions>
         </MuiCard>
     )
-}
-
-Card.defaultProps = {
-    name: "",
-    likes: 0,
-    mediaUrl: "",
-    user: {
-        avatarUrl: "",
-        verified: false
-    },
-    price: "",
-    currency: ""
 }
 
 export default Card
