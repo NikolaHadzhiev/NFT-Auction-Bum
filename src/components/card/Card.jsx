@@ -8,17 +8,23 @@ import Avatar from "../avatar/Avatar.jsx"
 import styles from './Card.module.scss'
 import classNames from "classnames";
 import millify from "millify";
+import LiveTvIcon from '@mui/icons-material/LiveTv';
+import Countdown from 'react-countdown';
 
-function Card({name = "", likes = 0, mediaUrl = "/images/nft.jpg", user: {avatarUrl = "/images/avatar.png", verified = false}, price = "", currency = ""}) {
+export default function Card({ name = "", likes = 0, mediaUrl = "/images/nft.jpg", user: { avatarUrl = "/images/avatar.png", verified = false }, price = "", currency = "", timeLeft = null}) {
     return (
-        <MuiCard className={classNames(styles.card)}>
+        <MuiCard className={`${timeLeft == null ? classNames(styles.card) : classNames(styles.card, styles.card_live)}`}>
             <CardHeader sx={{ padding: '1.0625rem 1rem 0.4375rem 1rem' }} avatar={<Avatar url={avatarUrl} size={45} verified={verified} />} />
-            <CardMedia className={classNames(styles.media)}
-                component="img"
-                image={mediaUrl}
-                alt="NFT Auction"
-            />
-            <CardActions disableSpacing sx={{ padding: '0.25rem 0.9375rem 1.375rem 0.9375rem' }}>
+            <div className={classNames(styles.card_image)}>
+                {timeLeft != null ? <div className={classNames(styles.live_icon, styles.badge)}><LiveTvIcon className={classNames(styles.svg_icon)}/></div> : null}
+                <CardMedia className={classNames(styles.media, styles.badge)}
+                    component="img"
+                    image={mediaUrl}
+                    alt="NFT Auction"
+                />
+                {timeLeft != null ? <div className={classNames(styles.live_border)}><Countdown date={Date.now() + timeLeft} /></div> : null}
+            </div>
+            <CardActions disableSpacing sx={{ padding: '0.3125rem 0.9375rem 1.375rem 0.9375rem' }}>
                 <div className={classNames(styles.cardAction)}>
                     <span className={classNames(styles.title)}>{name}</span>
                     {price.toString().includes(".") ?
@@ -31,5 +37,3 @@ function Card({name = "", likes = 0, mediaUrl = "/images/nft.jpg", user: {avatar
         </MuiCard>
     )
 }
-
-export default Card

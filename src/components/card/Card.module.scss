@@ -5,10 +5,48 @@
     border-radius: 0.9375rem !important;
 }
 
-.media{
+.card_live{
+    background-color: #1a2e2d !important;
+}
+
+.card_image{
     padding: 0.625rem 0.9375rem;
+    position: relative;
+}
+
+.live_icon{
+    position: absolute;
+    padding: 0.625rem 0.625rem;
+    color: colors.$secondary_main;
+}
+
+.live_border{
+    position: absolute;
+    padding: 0 0.9375rem 0.625rem 0.9375rem;
+    bottom: 0;
+    width: 91%;
+    background-color: colors.$secondary_main;
+    color: black;
+    height: 45px;
+    border-bottom-right-radius: 1.06rem;
+    border-bottom-left-radius: 1.06rem;
+    text-align: center;
+    line-height: 3.125rem; 
+    font-weight: 900;
+}
+
+.badge{
+    border-radius: 1.06rem;
+}
+
+.svg_icon{
+    border-radius: 1.06rem;
+    height: 1.875rem !important;
+    width: 1.875rem !important;
+}
+
+.media{
     height: 18.75rem;
-    border-radius: 1.875rem;
 }
 
 .cardAction{

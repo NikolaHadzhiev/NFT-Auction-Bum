@@ -16,6 +16,7 @@
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
+    "react-countdown": "^2.3.2",
     "react-dom": "latest",
     "sass": "^1.42.1"
   },
