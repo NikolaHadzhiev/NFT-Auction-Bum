@@ -2,6 +2,7 @@ import Header from "../header/Header.jsx"
 import Footer from "../footer/footer.jsx"
 import Trending from "../trending/Trending.jsx"
 import Card from "../card/Card.jsx"
+import Auctions from "../auctions/Auctions.jsx"
 
 let cards = [
   {
@@ -10,6 +11,7 @@ let cards = [
     mediaUrl: "images/nft.jpg",
     price: 12.2,
     currency: "ETH",
+    timeLeft: 3.6e6
   },
   {
     name: "Riddles",
@@ -17,6 +19,7 @@ let cards = [
     mediaUrl: "images/nft.jpg",
     price: 10.1,
     currency: "ETH",
+    timeLeft: 3.6e6
   },
   {
     name: "Wandering Flame",
@@ -24,6 +27,7 @@ let cards = [
     mediaUrl: "images/nft.jpg",
     price: 5.5,
     currency: "ETH",
+    timeLeft: 3.6e6
   },
   {
     name: "Glorious Curtain",
@@ -31,6 +35,7 @@ let cards = [
     mediaUrl: "images/nft.jpg",
     price: 0.1,
     currency: "ETH",
+    timeLeft: 3.6e6
   },
 ]
 
@@ -38,9 +43,8 @@ export default function HomeComponent() {
   return (
     <>
       <Header />
-      <br />
-      <Card name="Clock" likes={1100} mediaUrl="/images/nft.jpg" user={{avatarUrl: "/images/avatar.png", verified: true}} price= "12.2" currency="ETH" timeLeft={3.6e6}/>
-      {/* <Trending cards={cards}/> */}
+      {/* <Card name="Clock" likes={1100} mediaUrl="/images/nft.jpg" user={{avatarUrl: "/images/avatar.png", verified: true}} price= "12.2" currency="ETH" timeLeft={3.6e6}/> */}
+      <Auctions cards={cards}/>
       <Footer />
     </>
   );
