@@ -21,7 +21,7 @@ export default function How({ description = "", title = "", items = [], link = "
                 <Grid item>
                     <div className={classNames(styles.step_component)}>
                         {items.map(((item, index) => {
-                            return (<HowStep number={index} title={item.title} description={item.description} />)
+                            return (<HowStep key={`${item.title}_${index}`}number={index} title={item.title} description={item.description} />)
                         }))}
                     </div>
                 </Grid>
