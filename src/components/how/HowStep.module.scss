@@ -1,0 +1,44 @@
+@use "../../styles/colors";
+
+.container{
+    display: flex;
+    background-color: #181828;
+    border-radius: 25px;
+    width: 35.625rem;
+    height: 12.5rem;
+    margin: -1.875rem 0 1.875rem 0;
+}
+
+.number{
+    width: 180px;
+    background-color: rgba(colors.$primary_main, 10%);
+    margin: 0;
+    text-align: center;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.number_h1{
+    margin: 0;
+    font-weight: 700;
+    font-size: 6.25rem;
+}
+
+.meta_info{
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    max-width: 18.75rem;
+    margin: 0 auto;
+}
+
+.meta_info_title{
+    margin: 0 0 0.625rem 0;
+    font-weight: 900;
+}
+
+.meta_info_description{
+    margin: 0;
+    opacity: 0.8;
+}
+

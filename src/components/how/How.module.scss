@@ -1,0 +1,49 @@
+@use "../../styles/colors";
+
+.wrapper {
+    background-color: colors.$primary_main;
+    height: 36.5625rem;
+}
+
+.how_content{
+  align-items: center;
+  justify-content: space-around;
+}
+
+.how_it_works{
+  display: inline-block;
+}
+
+.container{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  max-width: 30.625rem !important;
+}
+
+.title{
+  font-weight: 900;
+  font-size: 3.4375rem;
+  margin: 0;
+}
+
+.description{
+  margin: 1.25rem 0px 3.4375rem 0px;
+  opacity: 0.8;
+}
+
+.learn_button > a{
+  color: colors.$primary_main;
+  background-color: white;
+  font-weight: 800;
+  line-height: 2.6;
+  border-radius: 70px;
+  width: 21ch;
+}
+
+.step_component{
+  display: flex;
+  flex-direction: column;
+  height: 40.625rem;
+  justify-content: space-between;
+}
