@@ -16,7 +16,7 @@ export default function Featured({ items = [] }) {
         <Container maxWidth="xl" disableGutters={true}>
             <ImageList className={classNames(styles.grid_wrapper)} gap={20}>
                 {items.map((item, index) => (
-                    index == 0 ? <ImageListItem className={classNames(styles.grid_first_image)} key={item.image}>
+                <ImageListItem className={ index == 0 ? classNames(styles.grid_first_image) : null} key={item.image}>
                         <img
                             src={`${item.img}`}
                             srcSet={`${item.image}`}
@@ -25,17 +25,7 @@ export default function Featured({ items = [] }) {
                             className={classNames(styles.grid_image)}
                             onClick={() => handleClick(item.href)}
                         />
-                    </ImageListItem> :
-                        <ImageListItem key={item.image}>
-                            <img
-                                src={`${item.img}`}
-                                srcSet={`${item.image}`}
-                                alt={item.title}
-                                loading="lazy"
-                                className={classNames(styles.grid_image)}
-                                onClick={() => handleClick(item.href)}
-                            />
-                        </ImageListItem>
+                    </ImageListItem>
                 ))}
             </ImageList>
         </Container>

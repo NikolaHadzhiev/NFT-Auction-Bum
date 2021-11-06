@@ -5,6 +5,7 @@ import Card from "../card/Card.jsx"
 import Auctions from "../auctions/Auctions.jsx"
 import How from "../how/How.jsx"
 import Featured from "../featured/Featured.jsx"
+import CollectorColumn from "../collectors/CollectorColumn.jsx"
 
 let cards = [
   {
@@ -113,6 +114,31 @@ let items = [
   },
 ]
 
+let users = [
+  {
+    id: 1,
+    name: "Peter",
+    nftsCount: 12312,
+    avatar: "/images/avatar.png",
+    verified: true,
+  },
+  {
+    id: 2,
+    name: "John",
+    nftsCount: 1111,
+    avatar: "/images/avatar.png",
+    verified: true,
+  },
+  {
+    id: 3,
+    name: "Steven",
+    nftsCount: 432,
+    avatar: "/images/avatar.png",
+    verified: true,
+  }
+]
+
+
 export default function HomeComponent() {
   return (
     <>
@@ -120,8 +146,9 @@ export default function HomeComponent() {
       {/* <Card name="Clock" likes={1100} mediaUrl="/images/nft.jpg" user={{avatarUrl: "/images/avatar.png", verified: true}} price= "12.2" currency="ETH" timeLeft={3.6e6}/> */}
       {/* <Auctions cards={cards}/> */}
       <br />
-      <Featured items={items}/>
+      {/* <Featured items={items}/> */}
       {/* <How title={component.title} description={component.description} items={component.items} link={component.link} /> */}
+      {/* <CollectorColumn items={users}/> */}
       <Footer />
     </>
   );

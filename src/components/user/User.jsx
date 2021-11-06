@@ -8,7 +8,7 @@ export default function User({ name = "", info = "", avatar = "", size = 55, ver
             <Avatar url={avatar} size={size} verified={verified}></Avatar>
             <div className={classNames(styles.metaInfo)}>
                 <p className={classNames(styles.name)}>{name}</p>
-                <p className={classNames(styles.info)}>{info}</p>
+                <p className={classNames(styles.info)}>{info} Items</p>
             </div>
         </div>
     )
