@@ -1,7 +1,7 @@
 import classNames from "classnames";
-import styles from './HowStep.module.scss'
+import styles from './Step.module.scss'
 
-export default function HowStep({ number = 0, title = "", description = "" }) {
+export default function Step({ number = 0, title = "", description = "" }) {
     return (
         <div className={classNames(styles.container)}>
             <div className={classNames(styles.number)}>

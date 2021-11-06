@@ -2,7 +2,7 @@ import classNames from "classnames";
 import styles from './How.module.scss'
 import Grid from '@mui/material/Grid';
 import Button from "@mui/material/Button";
-import HowStep from "../how/HowStep.jsx"
+import Step from "../how/Step.jsx"
 
 
 export default function How({ description = "", title = "", items = [], link = "" }) {
@@ -21,7 +21,7 @@ export default function How({ description = "", title = "", items = [], link = "
                 <Grid item>
                     <div className={classNames(styles.step_component)}>
                         {items.map(((item, index) => {
-                            return (<HowStep key={`${item.title}_${index}`}number={index} title={item.title} description={item.description} />)
+                            return (<Step key={`${item.title}_${index}`}number={index} title={item.title} description={item.description} />)
                         }))}
                     </div>
                 </Grid>
