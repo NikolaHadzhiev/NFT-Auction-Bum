@@ -1,0 +1,33 @@
+@use "../../styles/colors";
+
+.container {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px !important;
+}
+
+.top_collectors{
+  display: flex;
+  align-items: center;
+  max-width: 91.5rem;
+  margin: 0 auto;
+}
+
+.form_control{
+  width: 15% !important;
+  margin-left: auto !important;
+}
+
+.form_control > div > div{
+    background-color: #1C1249;
+}
+
+.form_control > div > svg{
+    color: white;
+}
+
+.div_wrapper{
+    background-color: #0F0D1F;
+    height: 400px;
+}
