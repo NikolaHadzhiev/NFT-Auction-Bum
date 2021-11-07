@@ -10,7 +10,7 @@ import Card from "../card/Card.jsx"
 
 export default function Trending({ cards = [] }) {
     return (
-        <div>
+        <div className={classNames(styles.wrapper)}>
             <div className={classNames(styles.trending_header)}>
                 <h1>Trending</h1>
                 <FormControl className={classNames(styles.form_control)} fullWidth>

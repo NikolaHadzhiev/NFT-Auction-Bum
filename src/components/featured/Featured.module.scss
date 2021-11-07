@@ -1,8 +1,10 @@
 @use "../../styles/colors";
 
+.container{
+    margin-bottom: 5rem;
+}
 .grid_wrapper{
     grid-template-columns: repeat(6, 1fr) !important;
-    width: 95.625rem;
 }
 
 .grid_first_image{

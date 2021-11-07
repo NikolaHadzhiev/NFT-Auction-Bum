@@ -1,5 +1,9 @@
 @use "../../styles/colors";
 
+.wrapper{
+  margin-bottom: 5rem;
+}
+
 .container {
   display: flex !important;
   align-items: center;
@@ -16,4 +20,8 @@
 .form_control{
   width: 15% !important;
   margin-left: auto !important;
+}
+
+.form_control > div > svg{
+  color: white;
 }

@@ -10,7 +10,7 @@ import Card from "../card/Card.jsx"
 
 export default function Auctions({ cards = [] }) {
     return (
-        <div>
+        <div className={classNames(styles.wrapper)}>
             <div className={classNames(styles.trending_header)}>
                 <h1>🔥 Live Auctions</h1>
                 <FormControl className={classNames(styles.form_control)} fullWidth>

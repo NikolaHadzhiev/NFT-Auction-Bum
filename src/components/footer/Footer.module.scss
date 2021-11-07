@@ -4,6 +4,8 @@
     background-color: colors.$background_paper;
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
 }
 
@@ -24,6 +26,6 @@
 }
 
 .wrapper{
-    max-width: 1600px;
+    max-width: 1450px;
     margin: 0 auto;
 }

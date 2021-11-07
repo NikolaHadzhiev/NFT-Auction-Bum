@@ -13,12 +13,12 @@ export default function Featured({ items = [] }) {
       }
 
     return (
-        <Container maxWidth="xl" disableGutters={true}>
+        <Container maxWidth="xl" className={classNames(styles.container)}>
             <ImageList className={classNames(styles.grid_wrapper)} gap={20}>
                 {items.map((item, index) => (
                 <ImageListItem className={ index == 0 ? classNames(styles.grid_first_image) : null} key={item.image}>
                         <img
-                            src={`${item.img}`}
+                            src={`${item.image}`}
                             srcSet={`${item.image}`}
                             alt={item.title}
                             loading="lazy"
