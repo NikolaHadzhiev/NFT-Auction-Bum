@@ -84,3 +84,21 @@
     margin-left: 0.625rem !important;
     margin-right: -0.5rem !important;
 }
+
+.chip_live{
+    margin-left: auto;
+    border: 2px solid !important;
+    color: black !important;
+    background-color: colors.$secondary_main !important; 
+    height: 2.3125rem !important;
+    border-radius: 10px !important;
+    font-size: 1rem !important;
+    font-weight: 600;
+}
+
+.live_icon_style{
+    color: black !important; 
+    font-size: 1rem !important;
+    margin-left: 0.625rem !important;
+    margin-right: -0.5rem !important;
+}
