@@ -7,11 +7,6 @@
     grid-template-columns: repeat(6, 1fr) !important;
 }
 
-.grid_first_image{
-    grid-column-end: span 3 !important; 
-    grid-row-end: span 2 !important;
-}
-
 .grid_image{
     border-radius: 15px;
 }

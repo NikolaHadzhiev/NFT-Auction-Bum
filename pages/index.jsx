@@ -242,19 +242,19 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <Featured items={items} />
+      <Featured items={items} />
       <Trending cards={cards} />
       <TopCollectors collectors={collectros} />
       <How title={how.title} description={how.description} items={how.items} link={how.link} />
-      <Auctions cards={auctions} /> */}
-      <div style={{ position: "relative" }}>
+      <Auctions cards={auctions} />
+      {/* <div style={{ position: "relative" }}>
         <ProductImage url={"/images/nft.jpg"} />
         <ProductInfoTitle text={"Shallow Son"} />
         <ProductInfoPrice amount={3} currency={"ETH"} />
         <ProductInfoStatus />
         <ProductInfoLikes amount={1110} />
       </div>
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

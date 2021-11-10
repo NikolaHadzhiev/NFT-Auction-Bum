@@ -15,8 +15,8 @@ export default function Featured({ items = [] }) {
     return (
         <Container maxWidth="xl" className={classNames(styles.container)}>
             <ImageList className={classNames(styles.grid_wrapper)} gap={20}>
-                {items.map((item, index) => (
-                <ImageListItem className={ index == 0 ? classNames(styles.grid_first_image) : null} key={item.image}>
+                {items.map((item) => (
+                <ImageListItem cols={item.cols || 1} rows={item.rows || 1} key={item.image}>
                         <img
                             src={`${item.image}`}
                             srcSet={`${item.image}`}
