@@ -244,9 +244,10 @@ export default function Home() {
       <Header />
       <Featured items={items} />
       <Trending cards={cards} />
-      <TopCollectors collectors={collectros} />
+      <TopCollectors collectors={collectros.sort(function(a, b){return b-a})} />
       <How title={how.title} description={how.description} items={how.items} link={how.link} />
       <Auctions cards={auctions} />
+      <Footer /> 
       {/* <div style={{ position: "relative" }}>
         <ProductImage url={"/images/nft.jpg"} />
         <ProductInfoTitle text={"Shallow Son"} />
@@ -254,7 +255,7 @@ export default function Home() {
         <ProductInfoStatus />
         <ProductInfoLikes amount={1110} />
       </div>
-      <Footer /> */}
+      */}
     </>
   )
 }
