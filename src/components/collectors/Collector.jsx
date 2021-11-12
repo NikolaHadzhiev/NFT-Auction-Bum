@@ -9,7 +9,7 @@ export default function CollectorColumn({ type = "", item}) {
                 <h1 className={classNames(styles.number_h1)}>{item.id}</h1>
             </div>
             <div className={classNames(styles.user)}>
-                <User name={item.name} info={item.nftsCount} avatar={item.avatar} verified={item.verified} />
+                <User name={item.username} info={item.nfts.length} avatar={item.avatar.url} verified={item.verified} />
             </div>
         </div>
     )

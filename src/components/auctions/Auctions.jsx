@@ -27,8 +27,8 @@ export default function Auctions({ cards = [] }) {
             </div>
             <Container className={classNames(styles.container)} maxWidth="xl">
                 <Grid container spacing={1.7}>
-                    {cards.map((card) => {
-                        return (<Grid item key={card.name}><Card name={card.name} likes={1100} mediaUrl={card.mediaUrl} user={card.user} price={card.price} currency={card.currency} timeLeft={card.timeLeft}/></Grid>)
+                    {cards.map((card, index) => {
+                        return (<Grid item key={card.id}>{index < 4 ? <Card name={card.name} likes={card.likes} mediaUrl={card.source.url} user={card.owner} price={card.price} currency={card.currency} timeLeft={card.auction_end}/> : null}</Grid>)
                     })}
                 </Grid>
             </Container>

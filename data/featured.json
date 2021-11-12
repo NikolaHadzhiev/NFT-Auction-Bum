@@ -1,6 +1,8 @@
 [
   {
     "id": 389,
+    "rows": 2,
+    "cols": 3,
     "name": "Gorgeous Fresh Bike",
     "price": 1.236,
     "owner": {

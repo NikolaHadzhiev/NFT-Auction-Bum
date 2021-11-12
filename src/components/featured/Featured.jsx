@@ -16,14 +16,14 @@ export default function Featured({ items = [] }) {
         <Container maxWidth="xl" className={classNames(styles.container)}>
             <ImageList className={classNames(styles.grid_wrapper)} gap={20}>
                 {items.map((item) => (
-                <ImageListItem cols={item.cols || 1} rows={item.rows || 1} key={item.image}>
+                <ImageListItem cols={item.cols || 1} rows={item.rows || 1} key={item.id}>
                         <img
-                            src={`${item.image}`}
-                            srcSet={`${item.image}`}
-                            alt={item.title}
+                            src={`${item.source.url}`}
+                            srcSet={`${item.source.url}`}
+                            alt={item.name}
                             loading="lazy"
                             className={classNames(styles.grid_image)}
-                            onClick={() => handleClick(item.href)}
+                            onClick={() => handleClick(item.source.url)}
                         />
                     </ImageListItem>
                 ))}
