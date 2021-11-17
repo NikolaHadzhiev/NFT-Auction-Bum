@@ -1,9 +1,13 @@
 .image{
     border-radius: 15px;
-    width: 41.875rem;
+    width: 43.6875rem;
     height: 37.5rem
 }
 
-.product_image{
-    display: inline-block;
+.product-image{
+    position: absolute;
+    width: 43.6875rem;
+    height: 37.5rem;
+    left: 251px;
+    top: 176px;
 }

@@ -1,0 +1,21 @@
+@use "../../styles/colors";
+
+.stats{
+    align-items: center;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    border-top: 5px solid rgba(colors.$primary_main, 0.1);
+}
+
+.product_info_meta{
+    display: inline-flex;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 1093px;
+    top: 176px;
+}
+

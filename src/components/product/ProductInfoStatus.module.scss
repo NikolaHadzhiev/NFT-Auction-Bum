@@ -1,24 +1,24 @@
 @use "../../styles/colors";
 
-.product_info_status{
-    display: inline-block;
-    position: absolute;
-    top: 110px;
-    right: 200px;
+.product-info-status{
+    
+    left: 79.01%;
+    right: 17.08%;
+    top: 23.41%;
+    bottom: 73.96%;
 }
 
 .status{
-    margin-left: auto;
     border: 2px solid !important;
     color: black !important;
     background-color: colors.$secondary_main !important; 
     height: 2.3125rem !important;
-    border-radius: 10px !important;
+    border-radius: 7px !important;
     font-size: 1rem !important;
     font-weight: 600;
 }
 
-.live_icon{
+.live-icon{
     color: black !important; 
     font-size: 1rem !important;
     margin-left: 0.625rem !important;

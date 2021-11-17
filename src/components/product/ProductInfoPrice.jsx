@@ -4,8 +4,8 @@ import Typography from '@mui/material/Typography';
 
 export default function ProductInfoPrice({ amount = 0, currency}) {
     return (
-        <div className={classNames(styles.product_info_price)}>
-             <Typography variant="p" component="p">ON SALE FOR {amount} {currency}</Typography>
+        <div className={classNames(styles['product-info-price'])}>
+             <Typography variant="p" component="p" className={classNames(styles['p-styles'])}>ON SALE FOR {amount} {currency}</Typography>
         </div>
     )
 }

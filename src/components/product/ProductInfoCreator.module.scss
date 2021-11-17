@@ -1,0 +1,26 @@
+@use "../../styles/colors";
+
+.title{
+    background-color: #1E1A3C;
+    height: 2.5rem;
+    margin: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-left: 1.5625rem;
+    padding-top: 0.5rem;
+    font-size: 14px;
+}
+
+.product-info-creator{
+    width: 340px;
+    height: 118px;
+    left: 1090px;
+    top: 351px;
+    border-radius: 15px;
+    background-color: colors.$background_paper;
+}
+
+.user-container{
+    padding-left: 1.5625rem;
+    padding-top: 0.9375rem;
+}
