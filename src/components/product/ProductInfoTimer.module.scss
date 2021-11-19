@@ -22,14 +22,11 @@
     border-radius: 15px;
     width: 14rem;
     height: 7.5rem;
+    background-color: colors.$background_paper;
 }
 
 .active{
     background-color: colors.$secondary_main;
-}
-
-.deactive{
-    background-color: colors.$background_paper;
 }
 
 .timer{
