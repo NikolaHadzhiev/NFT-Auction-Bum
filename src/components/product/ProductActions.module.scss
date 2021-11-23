@@ -1,0 +1,23 @@
+@use "../../styles/colors";
+
+.product-actions{
+    position: absolute;
+    width: 665px;
+    left: 1090px;
+    top: 930px;
+}
+
+.button{
+    background-color: colors.$primary_main !important;
+    width: 270px;
+}
+
+.button-bid{
+    background-color: inherit !important;
+    width: inherit !important;
+}
+
+.button-disabled{
+    color: #86868A;
+    background-color: #292931 !important;
+}

@@ -8,6 +8,7 @@ import ProductInfoCreator from "../../src/components/product/ProductInfoCreator.
 import ProductInfoTimer from "../../src/components/product/ProductInfoTimer.jsx"
 import ProductInfo from "../../src/components/product/ProductInfo.jsx"
 import ProductTabs from "../../src/components/product/ProductTabs.jsx"
+import ProductAction from "../../src/components/product/ProductActions.jsx"
 import Footer from "../../src/components/footer/footer.jsx"
 
 let product = {
@@ -65,6 +66,7 @@ export default function Product() {
             <ProductImage url={"/images/nft.jpg"} />
             <ProductInfo title={product.title} creator={product.creator} price={product.price} currency={product.currency} likes={product.likes} timeEnd={product.timeEnd} isLive={product.isLive} />
             <ProductTabs text={props.text} bids={props.bids} />
+            <ProductAction />
             <Footer />
         </>
     )
