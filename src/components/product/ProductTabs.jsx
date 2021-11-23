@@ -18,8 +18,8 @@ export default function ProductTabs({ text, bids = [] }) {
             <TabContext value={value}>
                 <Box sx={{ borderBottom: 4, borderColor: '#1A1140' }}>
                     <TabList onChange={handleChange}>
-                        <Tab className={"product-details"} label="Details" value="1" />
-                        <Tab className={"product-bids"} label="Bids" value="2" />
+                        <Tab className={"tab-details"} label="Details" value="1" />
+                        <Tab className={"tab-bids"} label="Bids" value="2" />
                     </TabList>
                 </Box>
                 <TabPanel value="1" sx={{padding: '10px 0 0 0', maxWidth: "450px"}}>
