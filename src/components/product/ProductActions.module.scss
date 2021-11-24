@@ -2,14 +2,15 @@
 
 .product-actions{
     position: absolute;
-    width: 665px;
+    width: 625px;
     left: 1090px;
     top: 930px;
 }
 
 .button{
     background-color: colors.$primary_main !important;
-    width: 270px;
+    width: 330px;
+    height: 60px;
 }
 
 .button-bid{
@@ -18,6 +19,11 @@
 }
 
 .button-disabled{
-    color: #86868A;
+    color:  colors.$text_disabled !important;
     background-color: #292931 !important;
+}
+
+.button-disabled-bid{
+    color:  colors.$text_disabled !important;
+    border: 2px solid #292931 !important;
 }

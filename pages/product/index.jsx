@@ -58,6 +58,15 @@ let props = {
     ],
 };
 
+let productAction = {
+    isLive: true,
+    currency: "ETH",
+    buyAmount: 50,
+    bidAmount: 9,
+    onBuy: () => {},
+    onBid: () => {},
+}
+
 
 export default function Product() {
     return (
@@ -66,7 +75,7 @@ export default function Product() {
             <ProductImage url={"/images/nft.jpg"} />
             <ProductInfo title={product.title} creator={product.creator} price={product.price} currency={product.currency} likes={product.likes} timeEnd={product.timeEnd} isLive={product.isLive} />
             <ProductTabs text={props.text} bids={props.bids} />
-            <ProductAction />
+            <ProductAction {...productAction}/>
             <Footer />
         </>
     )
