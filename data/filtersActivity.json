@@ -1,0 +1,17 @@
+{
+  "sort": [
+    { "label": "Date (Ascending)", "value": 1 },
+    { "label": "Date (Descending)", "value": 2 },
+    { "label": "Name (Ascending)", "value": 3 },
+    { "label": "Name (Descending)", "value": 4 },
+    { "label": "Price (Ascending)", "value": 5 },
+    { "label": "Price (Descending)", "value": 6 }
+  ],
+  "type": [
+    { "label": "Liked", "value": 7 },
+    {
+      "label": "Bought",
+      "value": 8
+    }
+  ]
+}
