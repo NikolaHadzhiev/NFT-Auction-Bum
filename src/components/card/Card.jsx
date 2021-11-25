@@ -32,7 +32,7 @@ export default function Card({ name = "", likes = 0, mediaUrl = "/images/nft.jpg
                         <span className={classNames(styles.price)}>{price} {currency}</span>
                     }
                 </div>
-                <Chip className={classNames(styles.likes)} icon={<FavoriteIcon className={classNames(styles.icon)} />} label={millify(likes, { lowercase: true })} variant="outlined" />
+                <Chip className={classNames(styles.likes)} onClick={() => {}} icon={<FavoriteIcon className={classNames(styles.icon)} />} label={millify(likes, { lowercase: true })} variant="outlined" />
             </CardActions>
         </MuiCard>
     )
