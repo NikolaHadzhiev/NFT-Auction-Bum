@@ -1,12 +1,5 @@
 @use "../../styles/colors";
 
-.product-info-likes{
-    left: 83.54%;
-    right: 13.12%;
-    top: 23.41%;
-    bottom: 73.96%;
-}
-
 .icon{
     color: colors.$secondary_main !important; 
     font-size: 1rem !important;
@@ -15,12 +8,12 @@
 }
 
 .likes{
-    margin-left: auto;
+    margin-left: auto !important;
     border: 2px solid !important;
     color: colors.$secondary_main !important; 
     background-color: #1a2e2d !important;
     height: 2.3125rem !important;
     border-radius: 10px !important;
     font-size: 1rem !important;
-    font-weight: 600;
+    font-weight: 600 !important;
 }

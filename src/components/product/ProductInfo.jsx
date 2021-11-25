@@ -9,7 +9,7 @@ import Grid from '@mui/material/Grid';
 import classNames from "classnames";
 import styles from "./ProductInfo.module.scss";
 
-export default function ProductInfo({ title, creator, price, currency, likes, onTimeEnd, timeEnd, isLive}) {
+export default function ProductInfo({ title, owner, price, currency, likes, onTimeEnd, timeEnd, isLive}) {
     return (
         <div className={classNames(styles['product-info'])}>
             <ProductInfoTitle text={title} />
@@ -21,7 +21,7 @@ export default function ProductInfo({ title, creator, price, currency, likes, on
                 </div>
             </Stack>
             <Grid container spacing={2}>
-                <Grid item xs={7}><ProductInfoCreator name={creator.name} avatar={creator.avatar} verified={creator.verified} /></Grid>
+                <Grid item xs={7}><ProductInfoCreator name={owner.username} avatar={owner.avatar.url} verified={owner.confirmed} /></Grid>
                 <Grid item xs={5}><ProductInfoTimer timeEnd={timeEnd} onTimeEnd={onTimeEnd}/></Grid>
             </Grid>
         </div>

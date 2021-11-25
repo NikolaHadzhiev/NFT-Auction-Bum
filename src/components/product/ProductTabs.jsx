@@ -24,10 +24,6 @@ export default function ProductTabs({ text, bids = [] }) {
                 </Box>
                 <TabPanel value="1" sx={{padding: '10px 0 0 0', maxWidth: "450px"}}>
                     <p>{text}</p>
-                    <br />
-                    {bids.map((bid, i) => {
-                        return <br key={`bid-${i}`}/>
-                    })}
                 </TabPanel>
                 <TabPanel value="2" sx={{padding: '0'}}>
                     <Table sx={{ minWidth: 580 }}>

@@ -5,7 +5,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 
 export default function ProductInfoStatus() {
     return (
-        <div className={classNames(styles['product-info-status'])}>
+        <div className={'product-info-status'}>
              <Chip className={classNames(styles.status)} icon={<CircleIcon className={classNames(styles['live-icon'])} />} label={"LIVE"} variant="outlined" />
         </div>
     )
