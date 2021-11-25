@@ -5,6 +5,7 @@
     margin-bottom: 25px;
     padding-top: 15px;
     border-top: 5px solid rgba(colors.$primary_main, 0.1);
+    justify-content: space-between;
 }
 
 .product_info_meta{
@@ -14,8 +15,7 @@
 .product-info{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 1093px;
-    top: 176px;
+    width: 590px;
+    margin-bottom: 15px;
 }
 
