@@ -15,10 +15,9 @@ export default function Product() {
         setProduct(dataNfts)
     }, []);
 
-    function isInArray(product) {
-        return product.id === parseInt(id);
-    }
-    const foundProduct = product.find(isInArray);
+    const foundProduct = product.find(product => {
+        return product.id === parseInt(id)
+    });
 
     return (
         <>

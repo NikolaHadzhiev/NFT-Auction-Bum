@@ -1,0 +1,19 @@
+@use "../../styles/colors";
+
+.hero{
+    width: 100%;
+    height: 22.5rem;
+    margin-top: -5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$primary_main;
+}
+
+.text{
+    line-height: 73px !important;
+    text-align: center !important;
+    font-size: 60px !important;
+    font-weight: 900 !important;
+    margin-bottom: 6.25rem !important;
+}
