@@ -5,7 +5,7 @@ import styles from "./ProductContainer.module.scss";
 import ProductImage from "./ProductImage.jsx"
 import ProductInfo from "./ProductInfo.jsx"
 import ProductTabs from "./ProductTabs.jsx"
-import ProductAction from "./ProductActions.jsx"
+import ProductActions from "./ProductActions.jsx"
 import { useState, useEffect } from "react"
 
 export default function ProductContainer({ name, owner, price, currency, likes, auction_end, details, bids, source }) {
@@ -28,9 +28,9 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
                     <ProductImage url={source.url} />
                 </Grid>
                 <Grid item xs={5}>
-                    <ProductInfo title={name} owner={owner} price={price} currency={currency} likes={likes} onTimeEnd={functions.onTimeEnd} timeEnd={productIsLive} isLive={isLive} />
+                    <ProductInfo title={name} creator={owner} price={price} currency={currency} likes={likes} onTimeEnd={functions.onTimeEnd} timeEnd={productIsLive} isLive={isLive} />
                     <ProductTabs text={details} bids={bids} />
-                    <ProductAction isLive={isLive} currency={currency} buyAmount={price} bidAmount={(price / 3).toFixed(3)} onBuy={functions.onBuy} onBid={functions.onBid} />
+                    <ProductActions isLive={isLive} currency={currency} buyAmount={price} bidAmount={(price / 3).toFixed(3)} onBuy={functions.onBuy} onBid={functions.onBid} />
                 </Grid>
             </Grid>
         </div>
