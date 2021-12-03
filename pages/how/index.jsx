@@ -12,7 +12,7 @@ export default function How() {
     return (
         <>
             <Header />
-                <Hero text={"How it works"} />
+                <Hero text={"HОW IT WORKS"} />
                 <Description text={how.text} image={how.image} />
             <Footer />
         </>
