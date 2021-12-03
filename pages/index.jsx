@@ -9,7 +9,7 @@ import Trending from "../src/components/trending/Trending.jsx"
 import TopCollectors from "../src/components/collectors/TopCollectors.jsx"
 import How from "../src/components/how/How.jsx"
 import Auctions from "../src/components/auctions/Auctions.jsx"
-import Footer from "../src/components/footer/footer.jsx"
+import Footer from "../src/components/footer/Footer.jsx"
 
 export default function Home() {
   const [featuredCards, setFeaturedCards] = useState([]);
