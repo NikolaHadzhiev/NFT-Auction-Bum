@@ -1,24 +1,24 @@
 import classNames from "classnames";
-import styles from "./ProfileCollectionFilters.module.scss"
+import styles from "./ActivityFilters.module.scss"
 import { FormControl, Select, InputLabel, MenuItem, Stack, TextField, InputAdornment} from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from "react";
 
-export default function ProfileCollectionFilters({ filters }) {
-
+export default function ActivityFilters({ filters }) {
     const [sortValue, setSortValue] = useState("")
-    const [priceValue, setPrice] = useState("")
+    const [sortTypeValue, setSortType] = useState("")
 
-    const handleSort = (e) => {
-        setSortValue(e.target.value)
+    const handleSort = (event) => {
+        setSortValue(event.target.value)
     }
-    const handlePrice = (e) => {
-        setPrice(e.target.value)
+
+    const handleSortType = (event) => {
+        setSortType(event.target.value)
     }
 
     return (
-        <div className={classNames(styles['profile-collection-filters'])}>
+        <div className={classNames(styles['activity-filters'])}>
             <Stack spacing={1} direction="row" alignItems="center" justifyContent="flex-end">
                 <FormControl className={classNames(styles['select-buttons'])}>
                     <InputLabel id="sort-by-label">Sort by</InputLabel>
@@ -37,9 +37,9 @@ export default function ProfileCollectionFilters({ filters }) {
                     <Select
                         IconComponent={KeyboardArrowDownIcon}
                         labelId="select-price-range-label"
-                        value={priceValue}
-                        onChange={handlePrice}>
-                        {filters.price.map(filter => {
+                        value={sortTypeValue}
+                        onChange={handleSortType}>
+                        {filters.type.map(filter => {
                              return <MenuItem value={filter.value} key={filter.value}>{filter.label}</MenuItem>
                         })}
                     </Select>
