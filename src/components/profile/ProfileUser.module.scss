@@ -1,8 +1,14 @@
 @use "../../styles/colors";
 
 .profile-user{
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 120px;
+    margin: auto;
+    margin-bottom: 8rem;
 }
 
 .user-name{
