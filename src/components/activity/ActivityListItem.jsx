@@ -1,6 +1,6 @@
 import { formatDistance, parseISO } from "date-fns"
-import Avatar from '../avatar/Avatar.jsx'
-import Link from '../link/Link.jsx'
+import Avatar from "../avatar/Avatar.jsx"
+import Link from "../link/Link.jsx"
 import classNames from "classnames";
 import styles from "./ActivityListItem.module.scss"
 
