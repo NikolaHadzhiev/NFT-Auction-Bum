@@ -8,7 +8,7 @@ export default function ActivityList({ items }) {
         <div className={classNames(styles['activity-list'])}>
             <Stack spacing={2} direction="column" justifyContent="center" alignItems="center">
                 {items.map((item, i) => {
-                    return <ActivityListItem key={i} created_at={item.created_at} nft={item.nft} user={item.user} type={item.type} />
+                    <ActivityListItem key={i} created_at={item.created_at} nft={item.nft} user={item.user} type={item.type} />
                 })}
             </Stack>
         </div>
