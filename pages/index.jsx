@@ -15,6 +15,7 @@ export default function Home() {
   const [collectorFilters, setCollectorFilters] = useState([]);
   const [auctionsCards, setAuctionsCards] = useState([]);
   const [auctionFilters, setAuctionFilters] = useState([]);
+  const [period, setPeriod] = useState(0);
 
   useEffect(async () => {
     const dataFeatured = await fetch(`${process.env.apiUrl}/featured`).then((response) => response.json());
@@ -27,7 +28,7 @@ export default function Home() {
     dataCollectors.users.sort(function (a, b) {
       return b.nfts.length - a.nfts.length;
     })
-    
+
     setFeaturedCards(dataFeatured);
     setTrendingItems(dataTrending.nfts);
     setTrendingFilters(dataTrending.filters.sort);
@@ -36,6 +37,18 @@ export default function Home() {
     setAuctionsCards(dataAuction.nfts)
     setAuctionFilters(dataAuction.filters.price)
   }, []);
+
+  useEffect(async () => {
+    if (period != 0) {
+      let url = `${process.env.apiUrl}/trending?sort=${period}`
+      const response = await fetch(url);
+      if (response.status == 200) {
+        const data = await response.json();
+        setTrendingItems(data.nfts);
+        console.log(url);
+      }
+    }
+  }, [period])
 
   let how = {
     title: "How it works",
@@ -65,7 +78,7 @@ export default function Home() {
     <>
       <Header />
       {featuredCards && <Featured items={featuredCards.nfts} />}
-      {trendingItems && <Trending cards={trendingItems} filters={trendingFilters}/>}
+      {trendingItems && <Trending cards={trendingItems} filters={trendingFilters} setPeriod={setPeriod} />}
       {topCollectors && <TopCollectors collectors={topCollectors} filters={collectorFilters} />}
       <How title={how.title} description={how.description} items={how.items} link={how.link} />
       {auctionsCards && <Auctions cards={auctionsCards} filters={auctionFilters} />}

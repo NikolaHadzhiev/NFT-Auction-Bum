@@ -8,8 +8,16 @@ import styles from "./Trending.module.scss";
 import classNames from "classnames";
 import Grid from '@mui/material/Grid';
 import Card from "../card/Card.jsx"
+import { useState } from "react";
 
-export default function Trending({ cards = [], filters }) {
+export default function Trending({ cards = [], filters, setPeriod}) {
+    const [trendingPeriod, setTrendingPeriod] = useState("")
+
+    const handlePeriod = (event) => {
+        setTrendingPeriod(event.target.value)
+        setPeriod(event.target.value)
+    }
+
     return (
         <div className={classNames(styles.wrapper)}>
             <div className={classNames(styles.trending_header)}>
@@ -22,7 +30,8 @@ export default function Trending({ cards = [], filters }) {
                         labelId="trending-select-lable"
                         id="trending-select-id"
                         label="This week"
-                    >
+                        value={trendingPeriod}
+                        onChange={handlePeriod}>
                         {filters.map((filter, index) => {
                             return (
                                 <MenuItem key={index} value={filter.value}>{filter.label}</MenuItem>
