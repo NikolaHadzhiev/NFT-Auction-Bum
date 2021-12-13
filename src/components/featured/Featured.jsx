@@ -23,7 +23,7 @@ export default function Featured({ items = [] }) {
                             alt={item.name}
                             loading="lazy"
                             className={classNames(styles.grid_image)}
-                            onClick={() => handleClick(item.source.url)}
+                            onClick={() => handleClick(`/product/${item.id}`)}
                         />
                     </ImageListItem>
                 ))}
