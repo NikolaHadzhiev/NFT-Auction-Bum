@@ -8,8 +8,16 @@ import styles from "./Auctions.module.scss";
 import classNames from "classnames";
 import Grid from '@mui/material/Grid';
 import Card from "../card/Card.jsx"
+import {useState} from "react";
 
-export default function Auctions({ cards = [], filters }) {
+export default function Auctions({ cards = [], filters, setLiveAuctionsPrice}) {
+    const [price, setPrice] = useState("")
+
+    const handlePrice = (event) => {
+        setPrice(event.target.value)
+        setLiveAuctionsPrice(event.target.value)
+    }
+
     return (
         <div className={classNames(styles.wrapper)}>
             <div className={classNames(styles.trending_header)}>
@@ -22,6 +30,8 @@ export default function Auctions({ cards = [], filters }) {
                         labelId="trending-select-lable"
                         id="trending-select-id"
                         label="This week"
+                        value={price}
+                        onChange={handlePrice}
                     >
                         {filters.map((filter, index) => {
                             return (

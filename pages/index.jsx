@@ -17,6 +17,7 @@ export default function Home() {
   const [auctionFilters, setAuctionFilters] = useState([]);
   const [period, setPeriod] = useState(0);
   const [topCollectorsSort, setTopCollectorsSort] = useState(0);
+  const [liveAuctionsPrice, setLiveAuctionsPrice] = useState(0);
 
   useEffect(async () => {
     const dataFeatured = await fetch(`${process.env.apiUrl}/featured`).then((response) => response.json());
@@ -57,10 +58,20 @@ export default function Home() {
       if (response.status == 200) {
         const data = await response.json();
         setTopCollectors(data.users);
-        console.log(url);
       }
     }
   }, [topCollectorsSort])
+
+  useEffect(async () => {
+    if (liveAuctionsPrice != 0) {
+      let url = `${process.env.apiUrl}/live-auctions?sort=${liveAuctionsPrice}`
+      const response = await fetch(url);
+      if (response.status == 200) {
+        const data = await response.json();
+        setAuctionsCards(data.nfts);
+      }
+    }
+  }, [liveAuctionsPrice])
 
   let how = {
     title: "How it works",
@@ -93,7 +104,7 @@ export default function Home() {
       {trendingItems && <Trending cards={trendingItems} filters={trendingFilters} setPeriod={setPeriod} />}
       {topCollectors && <TopCollectors collectors={topCollectors} filters={collectorFilters} setTopCollectorsSort={setTopCollectorsSort} />}
       <How title={how.title} description={how.description} items={how.items} link={how.link} />
-      {auctionsCards && <Auctions cards={auctionsCards} filters={auctionFilters} />}
+      {auctionsCards && <Auctions cards={auctionsCards} filters={auctionFilters} setLiveAuctionsPrice={setLiveAuctionsPrice}/>}
       <Footer />
     </>
   )
