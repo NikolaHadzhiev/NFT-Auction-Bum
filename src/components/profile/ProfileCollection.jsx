@@ -4,7 +4,7 @@ import Card from '../card/Card.jsx'
 import classNames from "classnames";
 import styles from "./ProfileCollection.module.scss"
 
-export default function ProfileCollection({ user, filters, items}) {
+export default function ProfileCollection({ user, filters, items, setSort, setPrice}) {
     return (
         <div className={classNames(styles['profile-collection'])}>
             <Container maxWidth="xl" disableGutters={true}>
@@ -13,7 +13,7 @@ export default function ProfileCollection({ user, filters, items}) {
                         <Typography variant={"h3"} fontSize={40} paddingLeft={3}>Collection</Typography>
                     </Grid>
                     <Grid item xs={9}>
-                        <ProfileCollectionFilters filters={filters} />
+                        <ProfileCollectionFilters filters={filters} setSort={setSort} setPrice={setPrice} />
                     </Grid>
                 </Grid>
                 <Grid container spacing={2} justifyContent={"center"} sx={{ paddingTop: "40px" }}>

@@ -5,15 +5,17 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from "react";
 
-export default function ProfileCollectionFilters({ filters }) {
+export default function ProfileCollectionFilters({ filters, setSort, setPrice}) {
 
     const [sortValue, setSortValue] = useState("")
-    const [priceValue, setPrice] = useState("")
+    const [priceValue, setPriceValue] = useState("")
 
     const handleSort = (e) => {
         setSortValue(e.target.value)
+        setSort(e.target.value)
     }
     const handlePrice = (e) => {
+        setPriceValue(e.target.value)
         setPrice(e.target.value)
     }
 
