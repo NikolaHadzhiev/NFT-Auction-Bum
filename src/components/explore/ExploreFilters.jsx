@@ -13,7 +13,7 @@ export default function ExploreFilters({ filters }) {
         setSortValue(event.target.value)
     }
 
-    const handleSortType = (event) => {
+    const handleSortPrice = (event) => {
         setSortPrice(event.target.value)
     }
 
@@ -38,7 +38,7 @@ export default function ExploreFilters({ filters }) {
                         IconComponent={KeyboardArrowDownIcon}
                         labelId="select-price-range-label"
                         value={sortPriceValue}
-                        onChange={handleSortType}>
+                        onChange={handleSortPrice}>
                         {filters.price.map(filter => {
                              return <MenuItem value={filter.value} key={filter.value}>{filter.label}</MenuItem>
                         })}
