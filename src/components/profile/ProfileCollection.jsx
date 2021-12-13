@@ -10,7 +10,7 @@ export default function ProfileCollection({ user, filters, items}) {
             <Container maxWidth="xl" disableGutters={true}>
                 <Grid container alignItems="baseline" justifyContent="center">
                     <Grid item xs={3} >
-                        <Typography variant={"h3"} fontSize={40}>Collection</Typography>
+                        <Typography variant={"h3"} fontSize={40} paddingLeft={3}>Collection</Typography>
                     </Grid>
                     <Grid item xs={9}>
                         <ProfileCollectionFilters filters={filters} />
@@ -19,7 +19,7 @@ export default function ProfileCollection({ user, filters, items}) {
                 <Grid container spacing={2} justifyContent={"center"} sx={{ paddingTop: "40px" }}>
                     {items.map((card, i) => {
                         return (
-                            <Grid item key={i} lg={3}>
+                            <Grid item key={i}>
                                 <Card user={user} name={card.name} price={card.price} likes={card.likes} currency={card.currency} mediaUrl={card.source.url} />
                             </Grid>
                         )
