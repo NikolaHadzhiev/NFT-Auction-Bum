@@ -2,59 +2,32 @@ import Header from "../../../src/components/header/Header.jsx"
 import ProfileHero from "../../../src/components/profile/ProfileHero.jsx"
 import ProfileUser from "../../../src/components/profile/ProfileUser.jsx"
 import ProfileCollection from "../../../src/components/profile/ProfileCollection.jsx"
-import dataProfile from "../../../data/profile.json"
 import Footer from "../../../src/components/footer/Footer.jsx"
+import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 
 export default function Profile() {
-    const filters = {
-        "sort": [
-            {
-                "label": "Date (Ascending)",
-                "value": 1
-            },
-            {
-                "label": "Date (Descending)",
-                "value": 2
-            },
-            {
-                "label": "Name (Ascending)",
-                "value": 3
-            },
-            {
-                "label": "Name (Descending)",
-                "value": 4
-            },
-            {
-                "label": "Price (Ascending)",
-                "value": 5
-            },
-            {
-                "label": "Price (Descending)",
-                "value": 6
-            }
-        ],
-        "price": [
-            {
-                "label": "0 - 0.01 ETH",
-                "value": 7
-            },
-            {
-                "label": "0.01 - 0.04 ETH",
-                "value": 8
-            },
-            {
-                "label": "0.04 - 0.07 ETH",
-                "value": 9
-            }
-        ]
-    }
+    const [profile, setProfile] = useState()
+    const [profileFilters, setProfileFilters] = useState()
+    const router = useRouter()
+    const { id } = router.query
+
+    useEffect(async () => {
+        const response = await fetch(`${process.env.apiUrl}/users/${id}`);
+        if (response.status == 200) {
+            const user = await response.json();
+            setProfile(user.user)
+            setProfileFilters(user.filters)
+        }
+    }, [id]);
 
     return (
         <>
             <Header />
-            <ProfileHero image={dataProfile?.avatar?.backgroundUrl} />
-            <ProfileUser name={dataProfile?.username} info={dataProfile?.info} avatar={dataProfile?.avatar?.url} verified={dataProfile?.verified} />
-            <ProfileCollection filters={filters} user={dataProfile} items={dataProfile?.nfts} />
+            {console.log(profileFilters)}
+            {profile && <ProfileHero image={profile.avatar.backgroundUrl} />}
+            {profile && <ProfileUser name={profile.username} avatar={profile.avatar.url} verified={profile.verified} info={profile.info} />}
+            {profileFilters && profile && <ProfileCollection filters={profileFilters} items={profile.nfts} user={profile} />}
             <Footer />
         </>
     )
