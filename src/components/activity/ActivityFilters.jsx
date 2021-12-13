@@ -19,7 +19,7 @@ export default function ActivityFilters({ filters }) {
 
     return (
         <div className={classNames(styles['activity-filters'])}>
-            <Stack spacing={1} direction="row" alignItems="center" justifyContent="flex-end">
+            <Stack spacing={1} direction="row" alignItems="center" justifyContent="center">
                 <FormControl className={classNames(styles['select-buttons'])}>
                     <InputLabel id="sort-by-label">Sort by</InputLabel>
                     <Select
