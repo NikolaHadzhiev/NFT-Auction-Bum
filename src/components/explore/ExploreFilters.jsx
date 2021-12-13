@@ -5,16 +5,18 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from "react";
 
-export default function ExploreFilters({ filters }) {
+export default function ExploreFilters({ filters, setSortBy, setPrice}) {
     const [sortValue, setSortValue] = useState("")
     const [sortPriceValue, setSortPrice] = useState("")
 
     const handleSort = (event) => {
-        setSortValue(event.target.value)
+        setSortValue(event.target.value);
+        setSortBy(event.target.value);
     }
 
     const handleSortPrice = (event) => {
-        setSortPrice(event.target.value)
+        setSortPrice(event.target.value);
+        setPrice(event.target.value);
     }
 
     return (
