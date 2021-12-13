@@ -5,16 +5,18 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from "react";
 
-export default function ActivityFilters({ filters }) {
+export default function ActivityFilters({ filters, setSortBy, setType}) {
     const [sortValue, setSortValue] = useState("")
     const [sortTypeValue, setSortType] = useState("")
 
     const handleSort = (event) => {
         setSortValue(event.target.value)
+        setSortBy(event.target.value)
     }
 
     const handleSortType = (event) => {
         setSortType(event.target.value)
+        setType(event.target.value)
     }
 
     return (
@@ -33,10 +35,10 @@ export default function ActivityFilters({ filters }) {
                     </Select>
                 </FormControl>
                 <FormControl className={classNames(styles['select-buttons'])}>
-                    <InputLabel id="price-range-label">Price range</InputLabel>
+                    <InputLabel id="type-label">Type</InputLabel>
                     <Select
                         IconComponent={KeyboardArrowDownIcon}
-                        labelId="select-price-range-label"
+                        labelId="select-type-label"
                         value={sortTypeValue}
                         onChange={handleSortType}>
                         {filters.type.map(filter => {
