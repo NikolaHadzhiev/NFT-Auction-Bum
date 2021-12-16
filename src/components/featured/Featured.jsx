@@ -19,7 +19,11 @@ export default function Featured({ items = [] }) {
                 <ImageListItem cols={item.cols || 1} rows={item.rows || 1} key={item.id}>
                         <img
                             src={`${(item.source.url).replace("http", "https")}`}
+<<<<<<< master
                             srcSet={`${(item.source.url).replace("http", "https")}`}
+=======
+                            srcSet={`${item.source.url}`}
+>>>>>>> fix: Featured images not rendering because of http response
                             alt={item.name}
                             loading="lazy"
                             className={classNames(styles.grid_image)}
