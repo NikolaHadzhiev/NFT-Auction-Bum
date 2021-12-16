@@ -1,28 +1,27 @@
-import dataNfts from "../../../data/nfts.json"
-import ErrorPage from 'next/error'
 import { useState, useEffect } from "react"
 import { useRouter } from 'next/router'
 import Header from "../../../src/components/header/Header.jsx"
 import ProductContainer from "../../../src/components/product/ProductContainer.jsx"
-import Footer from "../../../src/components/footer/footer.jsx"
+import Footer from "../../../src/components/footer/Footer.jsx"
 
 export default function Product() {
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState();
     const router = useRouter()
     const { id } = router.query
 
-    useEffect(() => {
-        setProduct(dataNfts)
-    }, []);
+    useEffect(async () => {
+        const response = await fetch(`${process.env.apiUrl}/nfts/${id}`);
+        if (response.status == 200) {
+            const product = await response.json();
+            setProduct(product)
+        }
+    }, [id]);
 
-    const foundProduct = product.find(product => {
-        return product.id === parseInt(id)
-    });
 
     return (
         <>
             <Header />
-            {foundProduct != undefined ? <ProductContainer {...foundProduct} /> : <ErrorPage statusCode={404} />}
+            {product && <ProductContainer {...product} />}
             <Footer />
         </>
 

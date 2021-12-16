@@ -1,7 +1,3 @@
-import dataFeatured from "../data/featured.json"
-import dataTrending from "../data/trending.json"
-import dataUsers from "../data/users.json"
-import dataNfts from "../data/nfts.json"
 import { useState, useEffect } from "react"
 import Header from "../src/components/header/Header.jsx"
 import Featured from "../src/components/featured/Featured.jsx"
@@ -9,20 +5,73 @@ import Trending from "../src/components/trending/Trending.jsx"
 import TopCollectors from "../src/components/collectors/TopCollectors.jsx"
 import How from "../src/components/how/How.jsx"
 import Auctions from "../src/components/auctions/Auctions.jsx"
-import Footer from "../src/components/footer/footer.jsx"
+import Footer from "../src/components/footer/Footer.jsx"
 
 export default function Home() {
   const [featuredCards, setFeaturedCards] = useState([]);
-  const [trendingCards, setTrendingCards] = useState([]);
+  const [trendingItems, setTrendingItems] = useState([]);
+  const [trendingFilters, setTrendingFilters] = useState([]);
   const [topCollectors, setTopCollectors] = useState([]);
+  const [collectorFilters, setCollectorFilters] = useState([]);
   const [auctionsCards, setAuctionsCards] = useState([]);
+  const [auctionFilters, setAuctionFilters] = useState([]);
+  const [period, setPeriod] = useState(0);
+  const [topCollectorsSort, setTopCollectorsSort] = useState(0);
+  const [liveAuctionsPrice, setLiveAuctionsPrice] = useState(0);
 
-  useEffect(() => {
-    setFeaturedCards(dataFeatured)
-    setTrendingCards(dataTrending)
-    setTopCollectors(dataUsers)
-    setAuctionsCards(dataNfts)
+  useEffect(async () => {
+    const dataFeatured = await fetch(`${process.env.apiUrl}/featured`).then((response) => response.json());
+    const dataTrending = await fetch(`${process.env.apiUrl}/trending`).then((response) => response.json());
+    const dataCollectors = await fetch(`${process.env.apiUrl}/top-collectors`).then((response) => response.json());
+    const dataAuction = await fetch(`${process.env.apiUrl}/live-auctions`).then((response) => response.json());
+
+    dataFeatured.nfts[0]["rows"] = 2;
+    dataFeatured.nfts[0]["cols"] = 3;
+    dataCollectors.users.sort(function (a, b) {
+      return b.nfts.length - a.nfts.length;
+    })
+
+    setFeaturedCards(dataFeatured);
+    setTrendingItems(dataTrending.nfts);
+    setTrendingFilters(dataTrending.filters.sort);
+    setTopCollectors(dataCollectors.users);
+    setCollectorFilters(dataCollectors.filters.sort);
+    setAuctionsCards(dataAuction.nfts)
+    setAuctionFilters(dataAuction.filters.price)
   }, []);
+
+  useEffect(async () => {
+    if (period != 0) {
+      let url = `${process.env.apiUrl}/trending?sort=${period}`
+      const response = await fetch(url);
+      if (response.status == 200) {
+        const data = await response.json();
+        setTrendingItems(data.nfts);
+      }
+    }
+  }, [period])
+
+  useEffect(async () => {
+    if (topCollectorsSort != 0) {
+      let url = `${process.env.apiUrl}/top-collectors?sort=${topCollectorsSort}`
+      const response = await fetch(url);
+      if (response.status == 200) {
+        const data = await response.json();
+        setTopCollectors(data.users);
+      }
+    }
+  }, [topCollectorsSort])
+
+  useEffect(async () => {
+    if (liveAuctionsPrice != 0) {
+      let url = `${process.env.apiUrl}/live-auctions?sort=${liveAuctionsPrice}`
+      const response = await fetch(url);
+      if (response.status == 200) {
+        const data = await response.json();
+        setAuctionsCards(data.nfts);
+      }
+    }
+  }, [liveAuctionsPrice])
 
   let how = {
     title: "How it works",
@@ -51,11 +100,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Featured items={featuredCards} />
-      <Trending cards={trendingCards} />
-      <TopCollectors collectors={topCollectors.sort(function (a, b) { return b - a })} />
+      {featuredCards && <Featured items={featuredCards.nfts} />}
+      {trendingItems && <Trending cards={trendingItems} filters={trendingFilters} setPeriod={setPeriod} />}
+      {topCollectors && <TopCollectors collectors={topCollectors} filters={collectorFilters} setTopCollectorsSort={setTopCollectorsSort} />}
       <How title={how.title} description={how.description} items={how.items} link={how.link} />
-      <Auctions cards={auctionsCards} />
+      {auctionsCards && <Auctions cards={auctionsCards} filters={auctionFilters} setLiveAuctionsPrice={setLiveAuctionsPrice}/>}
       <Footer />
     </>
   )

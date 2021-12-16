@@ -1,7 +1,7 @@
 import Header from "../../src/components/header/Header.jsx"
 import Hero from '../../src/components/hero/Hero.jsx'
 import Description from "../../src/components/description/Description.jsx"
-import Footer from "../../src/components/footer/footer.jsx"
+import Footer from "../../src/components/footer/Footer.jsx"
 
 export default function How() {
 
@@ -12,7 +12,7 @@ export default function How() {
     return (
         <>
             <Header />
-                <Hero text={"How it works"} />
+                <Hero text={"HОW IT WORKS"} />
                 <Description text={how.text} image={how.image} />
             <Footer />
         </>
