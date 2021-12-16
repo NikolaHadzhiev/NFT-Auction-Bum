@@ -10,3 +10,9 @@
 .grid_image{
     border-radius: 15px;
 }
+
+@media  screen and (max-width: 1350px) {
+    .grid_wrapper{
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
