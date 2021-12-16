@@ -2,8 +2,8 @@
 
 .wrapper {
     background-color: colors.$primary_main;
-    height: 36.5625rem;
     margin-bottom: 5rem;
+    max-height: 36.5625rem;
 }
 
 .how_content{
@@ -46,5 +46,59 @@
   display: flex;
   flex-direction: column;
   height: 40.625rem;
+  max-width: 580px;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+  .wrapper{
+    max-height: 105%;
+  }
+  .container{
+    align-items: baseline;
+    .title{
+      width: 230px;
+    }
+    .description{
+      width: 260px;
+    }
+    
+  }
+
+  .how_it_works{
+    margin-bottom: 2rem;
+  }
+
+  .step_component{
+    align-items: center;
+  }
+  .step_component{
+    align-items: center;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper{
+    max-height: 100%;
+  }
+  .container{
+    align-items: baseline;
+    .title{
+      width: 230px;
+    }
+    .description{
+      width: 260px;
+    }
+    
+  }
+
+  .how_it_works{
+    margin-bottom: 2rem;
+  }
+
+  .step_component{
+    align-items: center;
+    padding-bottom: 25px;
+  }
 }

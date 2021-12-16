@@ -12,6 +12,9 @@
 }
 
 @media  screen and (max-width: 1350px) {
+    .container{
+        width: 90% !important;
+    }
     .grid_wrapper{
         grid-template-columns: repeat(3, 1fr) !important;
     }

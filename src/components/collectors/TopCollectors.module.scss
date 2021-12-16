@@ -4,7 +4,7 @@
   display: flex !important;
   align-items: center;
   justify-content: center;
-  margin-left: 200px !important;
+  padding-bottom: 94px;
 }
 
 .top_collectors{
@@ -12,6 +12,7 @@
   align-items: center;
   max-width: 91.5rem;
   margin: 0 auto;
+  padding-top: 94px;
 }
 
 .form_control{
@@ -29,5 +30,34 @@
 
 .div_wrapper{
     background-color: #0F0D1F;
-    height: 400px;
+}
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+  .container{
+    div{
+      justify-content: center;
+    }
+  }
+  .top_collectors{
+    justify-content: space-evenly;
+    align-items: center;
+    .form_control{
+      width: 27% !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .top_collectors{
+    h1{
+      margin: 0;
+    }
+    flex-direction: column;
+    padding-bottom: 25px;
+    .form_control{
+      width: 40% !important;
+      margin: 0 !important;
+    }
+  }
 }

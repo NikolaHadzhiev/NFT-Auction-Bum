@@ -4,7 +4,7 @@
     display: flex;
     background-color: #181828;
     border-radius: 25px;
-    width: 35.625rem;
+    max-width: 35.625rem;
     height: 12.5rem;
     margin: -1.875rem 0 1.875rem 0;
 }
@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column !important;
     justify-content: center;
+    align-items: center;
     max-width: 18.75rem;
     margin: 0 auto;
 }
@@ -41,4 +42,31 @@
     margin: 0;
     opacity: 0.8;
 }
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+    .container{
+        margin: 0;
+    }
+    .meta_info_description{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 75%;
+    }
+}
+  
+  @media screen and (max-width: 600px) {
+    .container{
+        margin: 0;
+        width: 90%;
+    }
+    .number{
+        min-width: 100px;
+    }
+
+    .meta_info_description{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 75%;
+    }
+  }
 

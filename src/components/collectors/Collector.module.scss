@@ -3,8 +3,6 @@
 .collector_container{
     display: flex;
     height: 4.6875rem;
-    width: 20.625rem;
-    
 }
 
 .number_h1{
@@ -15,7 +13,8 @@
 }
 
 .user{
-    margin: 0.625rem 0px 0.625rem 1.25rem
+    min-width: 220px;
+    margin: 0.625rem auto 0.625rem auto;
 }
 
 .number{
