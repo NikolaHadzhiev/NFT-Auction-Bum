@@ -18,7 +18,7 @@ export default function Featured({ items = [] }) {
                 {items.map((item) => (
                 <ImageListItem cols={item.cols || 1} rows={item.rows || 1} key={item.id}>
                         <img
-                            src={`${item.source.url}`}
+                            src={`${(item.source.url).replace("http", "https")}`}
                             srcSet={`${item.source.url}`}
                             alt={item.name}
                             loading="lazy"
