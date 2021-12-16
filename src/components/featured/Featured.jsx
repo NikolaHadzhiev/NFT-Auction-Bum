@@ -20,10 +20,14 @@ export default function Featured({ items = [] }) {
                         <img
                             src={`${(item.source.url).replace("http", "https")}`}
 <<<<<<< master
+<<<<<<< master
                             srcSet={`${(item.source.url).replace("http", "https")}`}
 =======
                             srcSet={`${item.source.url}`}
 >>>>>>> fix: Featured images not rendering because of http response
+=======
+                            srcSet={`${(item.source.url).replace("http", "https")}`}
+>>>>>>> fix: Changed http with https
                             alt={item.name}
                             loading="lazy"
                             className={classNames(styles.grid_image)}
