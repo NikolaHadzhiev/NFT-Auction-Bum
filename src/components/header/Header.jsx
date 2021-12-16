@@ -14,14 +14,14 @@ export default function Header() {
                     <Grid item className={classNames(styles.logoContainer)}>
                         <Logo />
                     </Grid>
-                    <Grid item>
+                    <Grid item className={classNames(styles.input)}> 
                         <InputBase
                             startAdornment={<SearchIcon sx={{ marginRight: '0.5rem', marginLeft: '0.5rem' }} />}
                             className={classNames(styles.inputBase)}
                             placeholder="Find items, users and activities"
                         />
                     </Grid>
-                    <Grid item>
+                    <Grid item display={"flex"} className={classNames(styles.buttons)}>
                         <Button sx={{ margin: '0 0.5rem', textTransform: 'none' }} variant="text" color="inherit">Home</Button>
                         <Button sx={{ margin: '0 0.5rem', textTransform: 'none' }} variant="text" color="inherit">Activity</Button>
                         <Button sx={{ margin: '0 0.5rem' }} variant="contained">Explore</Button>
