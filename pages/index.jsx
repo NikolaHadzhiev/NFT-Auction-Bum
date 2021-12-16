@@ -101,10 +101,10 @@ export default function Home() {
     <>
       <Header />
       {featuredCards && <Featured items={featuredCards.nfts} />}
-      {trendingItems && <Trending cards={trendingItems} filters={trendingFilters} setPeriod={setPeriod} />}
+      {/* {trendingItems && <Trending cards={trendingItems} filters={trendingFilters} setPeriod={setPeriod} />}
       {topCollectors && <TopCollectors collectors={topCollectors} filters={collectorFilters} setTopCollectorsSort={setTopCollectorsSort} />}
       <How title={how.title} description={how.description} items={how.items} link={how.link} />
-      {auctionsCards && <Auctions cards={auctionsCards} filters={auctionFilters} setLiveAuctionsPrice={setLiveAuctionsPrice}/>}
+      {auctionsCards && <Auctions cards={auctionsCards} filters={auctionFilters} setLiveAuctionsPrice={setLiveAuctionsPrice}/>} */}
       <Footer />
     </>
   )
