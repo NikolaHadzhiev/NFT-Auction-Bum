@@ -39,7 +39,7 @@ export default function Explore() {
     <>
       <Header />
       <Container maxWidth="xl">
-        <Grid container alignItems='center'>
+        <Grid container alignItems='center' direction={{xs: 'column', lg: 'row'}}>
           <Grid item xs={3}>
             <ExploreTitle text="Explore" />
           </Grid>

@@ -22,3 +22,28 @@
     display: flex;
     justify-content: flex-end;
 }
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+    .search{
+        width: 90% !important;
+    }
+    .explore-filters{
+        padding-top: 50px;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .stack{
+        flex-direction: column !important;
+    }
+    .select-buttons{
+        width: 90% !important;
+        margin-bottom: 20px !important;
+    }
+    .search{
+        width: 90% !important;
+    }
+    .explore-filters{
+        padding-top: 50px;
+    }
+}
