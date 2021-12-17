@@ -5,6 +5,12 @@
     border-radius: 0.9375rem !important;
 }
 
+.card:hover{
+    border: 2px solid purple;
+    transform: scale(0.9); 
+    cursor: pointer;
+}
+
 .card_live{
     background-color: #1a2e2d !important;
 }

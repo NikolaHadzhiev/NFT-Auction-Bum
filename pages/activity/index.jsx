@@ -34,7 +34,6 @@ export default function Activity() {
 
     return (
         <>
-        {console.log(sort, type)}
             <Header />
             <Hero text={"Activity"} />
             {activityFilters && <ActivityFilters filters={activityFilters} setSortBy={setSort} setType={setType}/>}

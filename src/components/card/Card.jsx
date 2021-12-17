@@ -10,19 +10,26 @@ import classNames from "classnames";
 import millify from "millify";
 import CircleIcon from '@mui/icons-material/Circle';
 import Countdown from 'react-countdown';
+import {useState} from "react";
 
 export default function Card({ name = "", likes = 0, mediaUrl = "/images/nft.jpg", user, price = "", currency = "", timeLeft = null}) {
+        let onTimeEnd = () => {
+            setIsLive(null)
+        }
+
+    const [isLive, setIsLive] = useState(timeLeft);
+
     return (
-        <MuiCard className={`${timeLeft == null ? classNames(styles.card) : classNames(styles.card, styles.card_live)}`}>
+        <MuiCard className={`${isLive == null ? classNames(styles.card) : classNames(styles.card, styles.card_live)}`}>
             <CardHeader sx={{ padding: '1.0625rem 1rem 0.4375rem 1rem' }} avatar={<Avatar url={user.avatar.url} size={45} verified={user.verified || user.confirmed} />} />
             <div className={classNames(styles.card_image)}>
-                {timeLeft != null ? <div className={classNames(styles.live_icon, styles.badge)}><Chip className={classNames(styles.chip_live)} icon={<CircleIcon className={classNames(styles.live_icon_style)} />} label={"LIVE"} variant="outlined" /></div> : null}
+                {isLive != null ? <div className={classNames(styles.live_icon, styles.badge)}><Chip className={classNames(styles.chip_live)} icon={<CircleIcon className={classNames(styles.live_icon_style)} />} label={"LIVE"} variant="outlined" /></div> : null}
                 <CardMedia className={classNames(styles.media, styles.badge)}
                     component="img"
                     image={mediaUrl}
                     alt="NFT Auction"
                 />
-                {timeLeft != null ? <div className={classNames(styles.live_border)}><Countdown date={timeLeft} /></div> : null}
+                {isLive != null ? <div className={classNames(styles.live_border)}><Countdown date={timeLeft} onComplete={onTimeEnd} /></div> : null}
             </div>
             <CardActions disableSpacing sx={{ padding: '0.3125rem 0.9375rem 1.375rem 0.9375rem' }}>
                 <div className={classNames(styles.cardAction)}>

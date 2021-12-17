@@ -4,6 +4,12 @@
     height: 46.875rem;
 }
 
+.image:hover{
+    border: 2px solid purple;
+    transform: scale(0.9); 
+    cursor: pointer;
+}
+
 .product-image{
     width: 50rem;
     height: 46.875rem;

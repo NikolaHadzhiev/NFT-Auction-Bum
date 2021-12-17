@@ -18,8 +18,8 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
         onBid: () => { }
     }
 
-    const [isLive, setIsLive] = useState(auction_end != null ? true : false)
-    const [productIsLive, setproductIsLive] = useState(auction_end);
+    const [isLive, setIsLive] = useState((auction_end != null && new Date(auction_end) > Date.now()) ? true : false)
+    const [productIsLive, setproductIsLive] = useState((auction_end != null && new Date(auction_end) > Date.now()) ? auction_end : null);
 
     return (
         <div className={classNames(styles["product-container"])}>
