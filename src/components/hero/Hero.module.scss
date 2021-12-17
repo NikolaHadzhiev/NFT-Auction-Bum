@@ -17,3 +17,9 @@
     font-weight: 900 !important;
     margin-bottom: 6.25rem !important;
 }
+
+@media screen and (max-width: 600px) {
+    .text{
+        margin-bottom: 10.25rem !important;
+    }
+}

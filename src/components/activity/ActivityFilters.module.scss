@@ -21,3 +21,26 @@
 .activity-filters{
     margin-top: -160px;
 }
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+    .stack{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .stack{
+        flex-direction: column !important;
+    }
+    .select-buttons{
+        width: 90% !important;
+        margin-bottom: 20px !important;
+    }
+    .activity-filters{
+        margin-top: -210px;
+    }
+    .text{
+        margin-bottom: 4.25rem !important;
+    }
+}

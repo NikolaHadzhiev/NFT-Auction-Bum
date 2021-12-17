@@ -6,7 +6,7 @@
     justify-content: flex-start;
     border-radius: 15px;
     width: 940px;
-    height: 105px;
+    min-height: 105px;
     background-color: colors.$background_paper;
     padding-left: 1.47rem;
 }
@@ -22,3 +22,25 @@
     font-size: 0.875rem;
     font-weight: 300;
 }
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+    .activity-item-container{
+        width: 90%;
+        height: 150px;
+    }
+    .activity-item-para{
+        line-height: 1.8rem;
+        margin-left: 15px;
+    }
+}
+  
+  @media screen and (max-width: 600px) {
+    .activity-item-container{
+        width: 90%;
+        height: 150px;
+    }
+    .activity-item-para{
+        line-height: 1.8rem;
+        margin-left: 15px;
+    }
+  }

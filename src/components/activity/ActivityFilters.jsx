@@ -21,7 +21,7 @@ export default function ActivityFilters({ filters, setSortBy, setType}) {
 
     return (
         <div className={classNames(styles['activity-filters'])}>
-            <Stack spacing={1} direction="row" alignItems="center" justifyContent="center">
+            <Stack spacing={1} direction="row" alignItems="center" justifyContent="center" className={classNames(styles['stack'])}>
                 <FormControl className={classNames(styles['select-buttons'])}>
                     <InputLabel id="sort-by-label">Sort by</InputLabel>
                     <Select
