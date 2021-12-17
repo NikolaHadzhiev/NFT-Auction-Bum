@@ -12,7 +12,8 @@
 }
 
 .product-info-creator{
-    width: 340px;
+    max-width: 340px;
+    min-width: 225px;
     height: 118px;
     border-radius: 15px;
     background-color: colors.$background_paper;

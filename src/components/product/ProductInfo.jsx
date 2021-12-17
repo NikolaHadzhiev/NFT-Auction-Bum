@@ -13,14 +13,14 @@ export default function ProductInfo({ title, creator, price, currency, likes, on
     return (
         <div className={classNames(styles['product-info'])}>
             <ProductInfoTitle text={title} />
-            <Stack spacing={21} direction="row" className={classNames(styles.stats)}>
+            <Stack direction="row" className={classNames(styles.stats)}>
                 <ProductInfoPrice amount={price} currency={currency} />
                 <div className={classNames(styles.product_info_meta)}>
                     {(isLive != null && isLive != false) ? <ProductInfoStatus /> : null}
                     <ProductInfoLikes amount={likes} />
                 </div>
             </Stack>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className={classNames(styles['container'])}>
                 <Grid item xs={7}><ProductInfoCreator name={creator.username} avatar={creator.avatar.url} verified={creator.confirmed} /></Grid>
                 <Grid item xs={5}><ProductInfoTimer timeEnd={timeEnd} onTimeEnd={onTimeEnd}/></Grid>
             </Grid>

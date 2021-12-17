@@ -1,7 +1,7 @@
 @use "../../styles/colors";
 
 .product-actions{
-    width: 625px;
+    max-width: 625px;
 }
 
 .button{
@@ -23,4 +23,26 @@
 .button-disabled-bid{
     color:  colors.$text_disabled !important;
     border: 2px solid #292931 !important;
+}
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+    .button-bid{
+        width: 330px !important;
+    }
+
+    .container{
+        height: 150px;
+        align-items: center;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .button-bid{
+        width: 330px !important;
+    }
+
+    .container{
+        height: 150px;
+        align-items: center;
+    }
 }

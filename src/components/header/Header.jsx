@@ -22,9 +22,9 @@ export default function Header() {
                         />
                     </Grid>
                     <Grid item display={"flex"} className={classNames(styles.buttons)}>
-                        <Button sx={{ margin: '0 0.5rem', textTransform: 'none' }} variant="text" color="inherit">Home</Button>
-                        <Button sx={{ margin: '0 0.5rem', textTransform: 'none' }} variant="text" color="inherit">Activity</Button>
-                        <Button sx={{ margin: '0 0.5rem' }} variant="contained">Explore</Button>
+                        <Button href={"/"}sx={{ margin: '0 0.5rem', textTransform: 'none' }} variant="text" color="inherit">Home</Button>
+                        <Button href={"/activity"} sx={{ margin: '0 0.5rem', textTransform: 'none' }} variant="text" color="inherit">Activity</Button>
+                        <Button href={"/explore"} sx={{ margin: '0 0.5rem' }} variant="contained">Explore</Button>
                     </Grid>
                 </Grid>
             </div>

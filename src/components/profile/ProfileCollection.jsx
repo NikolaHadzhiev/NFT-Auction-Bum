@@ -8,9 +8,9 @@ export default function ProfileCollection({ user, filters, items, setSort, setPr
     return (
         <div className={classNames(styles['profile-collection'])}>
             <Container maxWidth="xl" disableGutters={true}>
-                <Grid container alignItems="baseline" justifyContent="center">
+                <Grid container alignItems="baseline" justifyContent="center" alignItems={"center"} direction={{xs: 'column', lg: 'row'}}>
                     <Grid item xs={3} >
-                        <Typography variant={"h3"} fontSize={40} paddingLeft={3}>Collection</Typography>
+                        <Typography variant={"h3"} fontSize={40} paddingLeft={{lg: 7}}>Collection</Typography>
                     </Grid>
                     <Grid item xs={9}>
                         <ProfileCollectionFilters filters={filters} setSort={setSort} setPrice={setPrice} />

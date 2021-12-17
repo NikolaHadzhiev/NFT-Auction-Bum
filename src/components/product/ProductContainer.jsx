@@ -23,7 +23,7 @@ export default function ProductContainer({ name, owner, price, currency, likes, 
 
     return (
         <div className={classNames(styles["product-container"])}>
-            <Grid container className={classNames(styles["container"])}>
+            <Grid container direction={{xs: "column", lg: "row"}} className={classNames(styles["container"])}>
                 <Grid item xs={6}>
                     <ProductImage url={source.url} />
                 </Grid>

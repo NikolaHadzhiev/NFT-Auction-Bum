@@ -24,3 +24,23 @@
     text-align: center !important;
     color: colors.$text_secondary;
 }
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+    .user-info{
+        font-size: 18px !important;
+        padding-top: 40px;
+        padding-bottom: 40px;
+   }
+}
+  
+@media screen and (max-width: 600px) {
+   .user-name{
+       font-size: 32px !important;
+   }
+   .user-info{
+        width: 260px !important;
+        font-size: 18px !important;
+        padding-top: 30px;
+        padding-bottom: 30px;
+   }
+}

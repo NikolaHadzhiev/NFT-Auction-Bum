@@ -1,10 +1,34 @@
 .image{
     border-radius: 15px;
-    width: 50rem;
+    max-width: 50rem;
     height: 46.875rem;
 }
 
 .product-image{
     width: 50rem;
     height: 46.875rem;
+}
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+    .image{
+        width: 612px;
+        height: 300px;
+    }
+
+    .product-image{
+        width: 612px;
+        height: 300px;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .image{
+        width: 312px;
+        height: 300px;
+    }
+
+    .product-image{
+        width: 312px;
+        height: 300px;
+    }
 }

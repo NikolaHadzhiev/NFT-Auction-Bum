@@ -94,7 +94,7 @@ export default function Home() {
           "Let's connect your wallet to BUM, edit your profile, and begin interacting in the space.",
       },
     ],
-    link: "https://app.boom.dev/"
+    link: "/how"
   }
 
   return (

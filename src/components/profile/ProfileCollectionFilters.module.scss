@@ -22,3 +22,27 @@
     margin-top: 2.5rem;
     padding-right: 25px;
 }
+
+@media screen and (max-width: 1350px) and (min-width: 600px) {
+    .search{
+        width: 85% !important;
+    }
+    .profile-collection-filters{
+        width: 80%;
+        padding: 0;
+        margin: 1rem auto 0 auto;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .select-buttons{
+        width: 90% !important;
+        margin-bottom: 20px !important;
+    }
+    .search{
+        width: 90% !important;
+    }
+    .profile-collection-filters{
+        padding: 0;
+    }
+}

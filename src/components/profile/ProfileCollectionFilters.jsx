@@ -21,7 +21,7 @@ export default function ProfileCollectionFilters({ filters, setSort, setPrice}) 
 
     return (
         <div className={classNames(styles['profile-collection-filters'])}>
-            <Stack spacing={1} direction="row" alignItems="center" justifyContent="flex-end">
+            <Stack spacing={1} direction={{xs: 'column', sm: "row", md: 'row', lg: "row"}} alignItems="center" justifyContent="flex-end" className={classNames(styles['stack'])}>
                 <FormControl className={classNames(styles['select-buttons'])}>
                     <InputLabel id="sort-by-label">Sort by</InputLabel>
                     <Select

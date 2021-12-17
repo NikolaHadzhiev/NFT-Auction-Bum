@@ -1,5 +1,5 @@
 .product-info-title{
-    width: 398px;
+    max-width: 398px;
     height: 73px;
 }
 
@@ -9,4 +9,10 @@
     font-weight: 900 !important;
     line-height: 73px !important;
     text-align: center !important;
+}
+
+@media screen and (max-width: 600px) {
+    .h1-style{
+        font-size: 24px !important;
+    }
 }
