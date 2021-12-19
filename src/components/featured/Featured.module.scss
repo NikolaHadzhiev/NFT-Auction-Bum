@@ -11,13 +11,28 @@
     border-radius: 15px;
 }
 
+.grid_wrapper{
+    li:first-child{
+        img{
+            max-width: 699px;
+            max-height: 482px;
+        }
+    }
+    li{
+        img{
+            max-width: 222px;
+            max-height: 226px;
+        }
+    }
+}
+
 .grid_image:hover{
    border: 2px solid purple;
    transform: scale(0.9); 
    cursor: pointer;
 }
 
-@media  screen and (max-width: 1350px) {
+@media  screen and (max-width: 600px) {
     .container{
         width: 90% !important;
     }

@@ -21,7 +21,8 @@
 }
 
 .image{
-    width: 100%;
+    width: 55%;
+    margin: 0 auto;
     height: 15.625rem;
     border-radius: 10px;
 }
@@ -35,5 +36,8 @@
 @media screen and (max-width: 600px) {
     .description{
         width: 90% !important;
+    }
+    .image{
+        width: 100%;
     }
 }

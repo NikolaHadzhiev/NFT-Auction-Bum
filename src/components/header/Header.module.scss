@@ -36,8 +36,9 @@
 @media screen and (max-width: 1350px) {
   .container{
     height: 240px;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column !important;
+    justify-content: space-evenly;
   }
   .nav{
     .wrapper{
@@ -45,33 +46,20 @@
     }
     height: 240px;
   }
-
-  .input{
-    width: 535px;
-  }
 }
 
 @media screen and (max-width: 600px) {
-  .container{
-    height: 160px;
-    justify-content: center;
-  }
-  .nav{
-    .wrapper{  
-      height: 160px;
-    }
-    height: 160px;
-  }
-
   .input{
-    width: 200px;
+    width: 300px;
   }
   .inputBase{
-    width: 200px;
+    width: 300px;
   }
   .buttons{
-    width: 330px;
+    width: 340px;
   }
   
 }
+
+
 

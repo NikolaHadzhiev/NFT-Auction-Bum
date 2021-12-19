@@ -1,7 +1,7 @@
 .image{
     border-radius: 15px;
-    max-width: 50rem;
-    height: 46.875rem;
+    max-width: 699px;
+    height: 600px;
 }
 
 .image:hover{
@@ -13,9 +13,12 @@
 .product-image{
     width: 50rem;
     height: 46.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-@media screen and (max-width: 1350px) and (min-width: 600px) {
+@media screen and (max-width: 1200px) and (min-width: 600px) {
     .image{
         width: 612px;
         height: 300px;

@@ -8,6 +8,9 @@
   display: flex !important;
   align-items: center;
   justify-content: center;
+  div{
+    justify-content: center;
+  }
 }
 
 .trending_header{
@@ -27,11 +30,6 @@
 }
 
 @media screen and (max-width: 1350px) and (min-width: 600px) {
-  .container{
-    div{
-      justify-content: center;
-    }
-  }
   .trending_header{
     justify-content: space-evenly;
     align-items: center;

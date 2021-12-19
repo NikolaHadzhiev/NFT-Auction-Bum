@@ -41,7 +41,7 @@ export default function Trending({ cards = [], filters, setPeriod}) {
                 </FormControl>
             </div>
             <Container className={classNames(styles.container)} maxWidth="xl">
-                <Grid container spacing={1.7}>
+                <Grid container spacing={1.7} className={classNames(styles.grid)}>
                     {cards.map((card, index) => {
                         return (<Grid item key={card.name}>{index < 4 ? <Card name={card.name} likes={card.likes} mediaUrl={card.source.url} user={card.owner} price={card.price} currency={card.currency} /> : null}</Grid>)
                     })}
